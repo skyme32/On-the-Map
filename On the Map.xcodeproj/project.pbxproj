@@ -9,25 +9,33 @@
 /* Begin PBXBuildFile section */
 		48DB9D0427B7B731007D4CB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D0327B7B731007D4CB0 /* AppDelegate.swift */; };
 		48DB9D0627B7B731007D4CB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D0527B7B731007D4CB0 /* SceneDelegate.swift */; };
-		48DB9D0827B7B731007D4CB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D0727B7B731007D4CB0 /* ViewController.swift */; };
+		48DB9D0827B7B731007D4CB0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D0727B7B731007D4CB0 /* LoginViewController.swift */; };
 		48DB9D0B27B7B731007D4CB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48DB9D0927B7B731007D4CB0 /* Main.storyboard */; };
 		48DB9D0D27B7B733007D4CB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48DB9D0C27B7B733007D4CB0 /* Assets.xcassets */; };
 		48DB9D1027B7B733007D4CB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48DB9D0E27B7B733007D4CB0 /* LaunchScreen.storyboard */; };
-		48DB9D1B27B7BBB8007D4CB0 /* MethodRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D1A27B7BBB8007D4CB0 /* MethodRequest.swift */; };
 		48DB9D1F27B805A5007D4CB0 /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D1E27B805A5007D4CB0 /* UdacityClient.swift */; };
+		48DB9D2227B811DD007D4CB0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D2127B811DD007D4CB0 /* Utils.swift */; };
+		48DB9D2427B813D9007D4CB0 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D2327B813D9007D4CB0 /* ErrorResponse.swift */; };
+		48DB9D2727B81B6C007D4CB0 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D2627B81B6C007D4CB0 /* LoginRequest.swift */; };
+		48DB9D2927B81C89007D4CB0 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D2827B81C89007D4CB0 /* LoginResponse.swift */; };
+		48DB9D2C27B82477007D4CB0 /* MethodAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D2527B81B29007D4CB0 /* MethodAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48DB9D0027B7B731007D4CB0 /* On the Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On the Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48DB9D0327B7B731007D4CB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48DB9D0527B7B731007D4CB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		48DB9D0727B7B731007D4CB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		48DB9D0727B7B731007D4CB0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		48DB9D0A27B7B731007D4CB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48DB9D0C27B7B733007D4CB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48DB9D0F27B7B733007D4CB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48DB9D1127B7B733007D4CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		48DB9D1A27B7BBB8007D4CB0 /* MethodRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MethodRequest.swift; path = "../../../../TheMovieManager/TheMovieManager/Model/Method Request/MethodRequest.swift"; sourceTree = "<group>"; };
 		48DB9D1E27B805A5007D4CB0 /* UdacityClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
+		48DB9D2127B811DD007D4CB0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		48DB9D2327B813D9007D4CB0 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		48DB9D2527B81B29007D4CB0 /* MethodAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodAPI.swift; sourceTree = "<group>"; };
+		48DB9D2627B81B6C007D4CB0 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		48DB9D2827B81C89007D4CB0 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,7 @@
 				48DB9D0527B7B731007D4CB0 /* SceneDelegate.swift */,
 				48DB9D1827B7B76C007D4CB0 /* model */,
 				48DB9D1727B7B74F007D4CB0 /* controller */,
+				48DB9D2027B811BB007D4CB0 /* Utils */,
 				48DB9D0927B7B731007D4CB0 /* Main.storyboard */,
 				48DB9D0C27B7B733007D4CB0 /* Assets.xcassets */,
 				48DB9D0E27B7B733007D4CB0 /* LaunchScreen.storyboard */,
@@ -75,7 +84,7 @@
 		48DB9D1727B7B74F007D4CB0 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				48DB9D0727B7B731007D4CB0 /* ViewController.swift */,
+				48DB9D0727B7B731007D4CB0 /* LoginViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -83,8 +92,8 @@
 		48DB9D1827B7B76C007D4CB0 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				48DB9D1D27B7BBE1007D4CB0 /* response */,
 				48DB9D1C27B7BBD6007D4CB0 /* client */,
+				48DB9D1D27B7BBE1007D4CB0 /* response */,
 				48DB9D1927B7B77D007D4CB0 /* request */,
 			);
 			path = model;
@@ -93,7 +102,7 @@
 		48DB9D1927B7B77D007D4CB0 /* request */ = {
 			isa = PBXGroup;
 			children = (
-				48DB9D1A27B7BBB8007D4CB0 /* MethodRequest.swift */,
+				48DB9D2627B81B6C007D4CB0 /* LoginRequest.swift */,
 			);
 			path = request;
 			sourceTree = "<group>";
@@ -102,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				48DB9D1E27B805A5007D4CB0 /* UdacityClient.swift */,
+				48DB9D2527B81B29007D4CB0 /* MethodAPI.swift */,
 			);
 			path = client;
 			sourceTree = "<group>";
@@ -109,8 +119,18 @@
 		48DB9D1D27B7BBE1007D4CB0 /* response */ = {
 			isa = PBXGroup;
 			children = (
+				48DB9D2327B813D9007D4CB0 /* ErrorResponse.swift */,
+				48DB9D2827B81C89007D4CB0 /* LoginResponse.swift */,
 			);
 			path = response;
+			sourceTree = "<group>";
+		};
+		48DB9D2027B811BB007D4CB0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				48DB9D2127B811DD007D4CB0 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,10 +205,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				48DB9D1F27B805A5007D4CB0 /* UdacityClient.swift in Sources */,
-				48DB9D1B27B7BBB8007D4CB0 /* MethodRequest.swift in Sources */,
-				48DB9D0827B7B731007D4CB0 /* ViewController.swift in Sources */,
+				48DB9D0827B7B731007D4CB0 /* LoginViewController.swift in Sources */,
 				48DB9D0427B7B731007D4CB0 /* AppDelegate.swift in Sources */,
+				48DB9D2C27B82477007D4CB0 /* MethodAPI.swift in Sources */,
 				48DB9D0627B7B731007D4CB0 /* SceneDelegate.swift in Sources */,
+				48DB9D2227B811DD007D4CB0 /* Utils.swift in Sources */,
+				48DB9D2727B81B6C007D4CB0 /* LoginRequest.swift in Sources */,
+				48DB9D2927B81C89007D4CB0 /* LoginResponse.swift in Sources */,
+				48DB9D2427B813D9007D4CB0 /* ErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

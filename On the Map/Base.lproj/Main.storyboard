@@ -11,7 +11,7 @@
         <!--Login Auth-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Login Auth" id="BYZ-38-t0r" customClass="ViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login Auth" id="BYZ-38-t0r" customClass="LoginViewController" customModule="On_the_Map" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,7 +58,7 @@
                                             </attributedString>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="QsQ-Fq-hl8" kind="presentation" modalPresentationStyle="fullScreen" id="9TY-OG-cHg"/>
+                                            <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7tu-fV-8mg"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mtj-al-SP0">
@@ -82,6 +82,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="signUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dCa-0w-GJy"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -110,15 +113,28 @@
                                     <constraint firstAttribute="trailing" secondItem="lFI-L6-Wf5" secondAttribute="trailing" constant="16" id="wJn-cz-ZTL"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="rH9-C0-uZL">
+                                <rect key="frame" x="197" y="654" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="rH9-C0-uZL" firstAttribute="top" secondItem="ZpO-aU-zpQ" secondAttribute="bottom" constant="16" id="Biy-O5-hqp"/>
+                            <constraint firstItem="rH9-C0-uZL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bHv-Hc-OdH"/>
                             <constraint firstItem="ZpO-aU-zpQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="by1-cY-l8c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZpO-aU-zpQ" secondAttribute="trailing" constant="16" id="gxe-Q6-aNv"/>
                             <constraint firstItem="ZpO-aU-zpQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uKw-up-17U"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="rH9-C0-uZL" id="HRX-ix-QNT"/>
+                        <outlet property="emailTextField" destination="EwG-fx-sCc" id="xGM-Ru-YCz"/>
+                        <outlet property="loginButton" destination="fT8-iM-qpt" id="eHq-S4-aFX"/>
+                        <outlet property="loginViaWebsiteButton" destination="1W6-lU-Ekz" id="Qcw-uH-I4o"/>
+                        <outlet property="passwordTextField" destination="lFI-L6-Wf5" id="dzf-oi-9Iz"/>
+                        <segue destination="QsQ-Fq-hl8" kind="presentation" identifier="completeLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="UNJ-cs-i2A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
