@@ -204,7 +204,11 @@
             <objects>
                 <tabBarController title="On The Map" id="jfS-W4-Nj4" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="On the map" id="eFj-vW-lxY">
-                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="9pu-w7-Zc6"/>
+                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="9pu-w7-Zc6">
+                            <connections>
+                                <action selector="logoutTapped:" destination="jfS-W4-Nj4" id="pch-jb-5m4"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem title="new" image="pin.fill" catalog="system" id="3QP-bb-SSF"/>
                             <barButtonItem title="Item" image="arrow.clockwise" catalog="system" id="c7X-Fs-q5y"/>

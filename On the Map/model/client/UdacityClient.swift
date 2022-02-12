@@ -46,5 +46,12 @@ class UdacityClient {
         }
     }
     
+    class func logout(completion: @escaping () -> Void) {
+        MethodAPI.taskForDELETERequest(url: Endpoints.login.url, responseType: Session.self) { response, error in
+            completion()
+        }
+    }
+    
+    
 }
 

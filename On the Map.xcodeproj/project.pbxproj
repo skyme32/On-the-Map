@@ -19,6 +19,7 @@
 		48DB9D2727B81B6C007D4CB0 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D2627B81B6C007D4CB0 /* LoginRequest.swift */; };
 		48DB9D2927B81C89007D4CB0 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D2827B81C89007D4CB0 /* LoginResponse.swift */; };
 		48DB9D2C27B82477007D4CB0 /* MethodAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D2527B81B29007D4CB0 /* MethodAPI.swift */; };
+		48DB9D2E27B84387007D4CB0 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D2D27B84387007D4CB0 /* ExtensionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		48DB9D2527B81B29007D4CB0 /* MethodAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodAPI.swift; sourceTree = "<group>"; };
 		48DB9D2627B81B6C007D4CB0 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		48DB9D2827B81C89007D4CB0 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		48DB9D2D27B84387007D4CB0 /* ExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				48DB9D0727B7B731007D4CB0 /* LoginViewController.swift */,
+				48DB9D2D27B84387007D4CB0 /* ExtensionViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				48DB9D2C27B82477007D4CB0 /* MethodAPI.swift in Sources */,
 				48DB9D0627B7B731007D4CB0 /* SceneDelegate.swift in Sources */,
 				48DB9D2227B811DD007D4CB0 /* Utils.swift in Sources */,
+				48DB9D2E27B84387007D4CB0 /* ExtensionViewController.swift in Sources */,
 				48DB9D2727B81B6C007D4CB0 /* LoginRequest.swift in Sources */,
 				48DB9D2927B81C89007D4CB0 /* LoginResponse.swift in Sources */,
 				48DB9D2427B813D9007D4CB0 /* ErrorResponse.swift in Sources */,
