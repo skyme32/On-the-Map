@@ -378,7 +378,7 @@
             </objects>
             <point key="canvasLocation" x="2843" y="108"/>
         </scene>
-        <!--Add Location-->
+        <!--Find Location-->
         <scene sceneID="TcT-Th-NJa">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4du-Ms-IKK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -464,7 +464,7 @@
                             <constraint firstItem="T3O-fF-cJG" firstAttribute="top" secondItem="mgB-t8-INA" secondAttribute="bottom" constant="16" id="t1M-nG-03R"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Location" id="BCx-GE-Pvz">
+                    <navigationItem key="navigationItem" title="Find Location" id="BCx-GE-Pvz">
                         <barButtonItem key="leftBarButtonItem" title="CANCEL" id="vG6-UK-0Ea">
                             <connections>
                                 <action selector="cancelTapped:" destination="QKm-sP-wEB" id="c3h-tj-rII"/>
@@ -482,17 +482,55 @@
             </objects>
             <point key="canvasLocation" x="3735" y="108"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Location-->
         <scene sceneID="oOl-SI-3ea">
             <objects>
-                <viewController id="HGB-sv-ko2" sceneMemberID="viewController">
+                <viewController id="HGB-sv-ko2" customClass="AddLocationViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tIG-f8-R8c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QRx-8q-gbR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVp-yJ-Nza">
+                                <rect key="frame" x="32" y="795" width="350" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="92L-3N-fUe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="ADD LOCATION">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addLocationTapped:" destination="HGB-sv-ko2" eventType="touchUpInside" id="q2l-Nj-fMH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="M0X-j3-MRK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="M0X-j3-MRK" firstAttribute="bottom" secondItem="QRx-8q-gbR" secondAttribute="bottom" id="1uD-Bt-Cay"/>
+                            <constraint firstItem="QRx-8q-gbR" firstAttribute="leading" secondItem="M0X-j3-MRK" secondAttribute="leading" id="PLG-GS-Fox"/>
+                            <constraint firstItem="M0X-j3-MRK" firstAttribute="trailing" secondItem="BVp-yJ-Nza" secondAttribute="trailing" constant="32" id="aSE-i4-YXX"/>
+                            <constraint firstItem="BVp-yJ-Nza" firstAttribute="leading" secondItem="M0X-j3-MRK" secondAttribute="leading" constant="32" id="bjG-cF-Ixe"/>
+                            <constraint firstItem="QRx-8q-gbR" firstAttribute="top" secondItem="M0X-j3-MRK" secondAttribute="top" id="fDd-Jr-JIy"/>
+                            <constraint firstItem="M0X-j3-MRK" firstAttribute="trailing" secondItem="QRx-8q-gbR" secondAttribute="trailing" id="mp9-Jj-qC2"/>
+                            <constraint firstItem="M0X-j3-MRK" firstAttribute="bottom" secondItem="BVp-yJ-Nza" secondAttribute="bottom" constant="25" id="wSI-aY-Yce"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="m2g-yr-pn2"/>
+                    <navigationItem key="navigationItem" title="Add Location" id="m2g-yr-pn2"/>
+                    <connections>
+                        <outlet property="addLocationButton" destination="BVp-yJ-Nza" id="f0W-yZ-7o2"/>
+                        <outlet property="onMapView" destination="QRx-8q-gbR" id="GvG-bq-HTE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRP-jJ-bfx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

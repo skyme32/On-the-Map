@@ -9,17 +9,14 @@ import Foundation
 
 
 struct UserResponse: Codable {
-    let firstName: String
     let lastName: String
-    let nickname: String
-    let imageUrl: String
-    let address: String
+    let firstName: String
+    let key: String
+
     
     enum CodingKeys: String, CodingKey {
-        case firstName = "first_name"
         case lastName = "last_name"
-        case nickname = "nickname"
-        case imageUrl = "_image_url"
-        case address = "address"
+        case firstName = "first_name"
+        case key = "key"
     }
 }

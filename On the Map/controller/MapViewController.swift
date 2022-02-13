@@ -15,7 +15,7 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var onStudentsMAp: MKMapView!
 
-    let limit: Int = 20
+    let limit: Int = FilterByStudent.MEDIUM
     let order: String = OrderByStudent.updatedAt
     
     
@@ -23,7 +23,6 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         onStudentsMAp.delegate = self        
     }
     
@@ -95,10 +94,8 @@ extension MapViewController: MKMapViewDelegate {
         
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
-            if let toOpen = view.annotation?.subtitle! {
-                if !toOpen.isEmpty {
-                    UIApplication.shared.open(URL(string: toOpen)!, options: [:], completionHandler: nil)
-                }
+            if let urlExtern = view.annotation?.subtitle! {
+                Utils.openURL(urlString: urlExtern, view: self)
             }
         }
     }

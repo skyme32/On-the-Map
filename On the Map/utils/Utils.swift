@@ -28,5 +28,31 @@ class Utils {
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         view.present(alertVC, animated: true, completion: nil)
     }
+    
+    class func verifyUrl (urlString: String?) -> Bool {
+        if let urlString = urlString {
+            if let url = NSURL(string: urlString) {
+                return UIApplication.shared.canOpenURL(url as URL)
+            }
+        }
+        return false
+    }
+    
+    class func openURL(urlString: String?, view: UIViewController) {
+        let urlRefactor = refactoringURL(urlString: urlString)
+        if verifyUrl(urlString: urlRefactor) {
+            UIApplication.shared.open(URL(string: urlRefactor)!, options: [:], completionHandler: nil)
+        } else {
+            showLoginFailure(title: "Error URL Web", message: "Unable to open web link.", view: view)
+        }
+    }
+    
+    class func refactoringURL(urlString: String?) -> String {
+        var urlRefactor = urlString
+        if !urlString!.contains("http") {
+            urlRefactor = "http://\(urlString!)"
+        }
+        return urlRefactor!
+    }
 
 }

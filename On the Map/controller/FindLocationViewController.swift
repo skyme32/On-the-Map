@@ -36,8 +36,18 @@ class FindLocationViewController: UIViewController {
         unsubscribeFromKeyboardNotifications()
     }
     
-    func validateStrings() {
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "completeLocation" {
+            let detailLocation = segue.destination as! AddLocationViewController
+            detailLocation.studentLocation = StudentLocation(
+                                                uniqueKey: "",
+                                                firstName: "",
+                                                lastName: "",
+                                                mapString: stringLocationText.text!,
+                                                mediaURL: urlWebText.text!,
+                                                latitude: coordinate.latitude,
+                                                longitude: coordinate.longitude)
+        }
     }
     
     // MARK: Actions on ViewController

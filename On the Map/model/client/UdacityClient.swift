@@ -23,6 +23,7 @@ class UdacityClient {
         case SignUp
         case studentLocations(String, Int)
         case userSession
+        case studentLocation
         
         var stringValue: String {
             switch self {
@@ -32,9 +33,11 @@ class UdacityClient {
                     return Endpoints.baseSignUp + "/sign-up"
                 case .studentLocations(let orderBy, let limit):
                     return Endpoints.base + "/StudentLocation?order=-\(orderBy)&limit=\(limit)"
+                case .studentLocation:
+                    return Endpoints.base + "/StudentLocation"
                 case .userSession:
                     return Endpoints.base + "/users/" + Auth.key
-            }
+                }
         }
         
         var url: URL {
@@ -84,6 +87,16 @@ class UdacityClient {
                 completion(response, nil)
             } else {
                 completion(nil, error)
+            }
+        }
+    }
+    
+    class func postStudentLocation(student: StudentLocation, completion: @escaping (Bool, Error?) -> Void) {               
+        MethodAPI.taskForPOSTRequest(url: Endpoints.studentLocation.url, responseType: StudentPostResponse.self, body: student) { response, error in
+            if response != nil {
+                completion(true, nil)
+            } else {
+                completion(false, error)
             }
         }
     }

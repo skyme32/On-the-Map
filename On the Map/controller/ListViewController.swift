@@ -12,7 +12,7 @@ class ListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var selectedIndex = 0
-    let limit: Int = 20
+    let limit: Int = FilterByStudent.MEDIUM
     let order: String = OrderByStudent.updatedAt
 
     override func viewDidLoad() {
@@ -28,7 +28,6 @@ class ListViewController: UIViewController {
     
     @IBAction func refreshStudents(_ sender: Any) {
         getStudentList()
-        self.tableView.reloadData()
     }
     
     @IBAction func newStudent(_ sender: Any) {
@@ -39,6 +38,7 @@ class ListViewController: UIViewController {
     private func getStudentList() {
         UdacityClient.getStudentLocationList(limit: limit, order: order) { studentLocations, error in
             StudentLocationModel.studentlist = studentLocations
+            self.tableView.reloadData()
         }
     }
 }
@@ -67,10 +67,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let urlExtern = StudentLocationModel.studentlist[indexPath.row].mediaURL
-        if !urlExtern.isEmpty {
-            UIApplication.shared.open(URL(string: urlExtern)!, options: [:], completionHandler: nil)
-        }
-        
+        Utils.openURL(urlString: urlExtern, view: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
