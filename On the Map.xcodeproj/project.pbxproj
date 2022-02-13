@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		489D055427B90BAE00F37A86 /* StudentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D055327B90BAE00F37A86 /* StudentLocation.swift */; };
+		489D055627B9109F00F37A86 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D055527B9109F00F37A86 /* MapViewController.swift */; };
+		489D055927B9141000F37A86 /* StudentLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D055827B9141000F37A86 /* StudentLocationModel.swift */; };
+		489D055B27B9342500F37A86 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D055A27B9342500F37A86 /* ListViewController.swift */; };
+		489D055E27B9491400F37A86 /* StudentLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D055D27B9491400F37A86 /* StudentLocationCell.swift */; };
 		48DB9D0427B7B731007D4CB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D0327B7B731007D4CB0 /* AppDelegate.swift */; };
 		48DB9D0627B7B731007D4CB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D0527B7B731007D4CB0 /* SceneDelegate.swift */; };
 		48DB9D0827B7B731007D4CB0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB9D0727B7B731007D4CB0 /* LoginViewController.swift */; };
@@ -23,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		489D055327B90BAE00F37A86 /* StudentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocation.swift; sourceTree = "<group>"; };
+		489D055527B9109F00F37A86 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		489D055827B9141000F37A86 /* StudentLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationModel.swift; sourceTree = "<group>"; };
+		489D055A27B9342500F37A86 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		489D055D27B9491400F37A86 /* StudentLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationCell.swift; sourceTree = "<group>"; };
 		48DB9D0027B7B731007D4CB0 /* On the Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On the Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48DB9D0327B7B731007D4CB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48DB9D0527B7B731007D4CB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +61,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		489D055727B913EE00F37A86 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				489D055827B9141000F37A86 /* StudentLocationModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		489D055C27B9456000F37A86 /* layouts */ = {
+			isa = PBXGroup;
+			children = (
+				489D055D27B9491400F37A86 /* StudentLocationCell.swift */,
+			);
+			path = layouts;
+			sourceTree = "<group>";
+		};
 		48DB9CF727B7B731007D4CB0 = {
 			isa = PBXGroup;
 			children = (
@@ -74,7 +100,8 @@
 				48DB9D0527B7B731007D4CB0 /* SceneDelegate.swift */,
 				48DB9D1827B7B76C007D4CB0 /* model */,
 				48DB9D1727B7B74F007D4CB0 /* controller */,
-				48DB9D2027B811BB007D4CB0 /* Utils */,
+				489D055C27B9456000F37A86 /* layouts */,
+				48DB9D2027B811BB007D4CB0 /* utils */,
 				48DB9D0927B7B731007D4CB0 /* Main.storyboard */,
 				48DB9D0C27B7B733007D4CB0 /* Assets.xcassets */,
 				48DB9D0E27B7B733007D4CB0 /* LaunchScreen.storyboard */,
@@ -87,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				48DB9D0727B7B731007D4CB0 /* LoginViewController.swift */,
+				489D055527B9109F00F37A86 /* MapViewController.swift */,
+				489D055A27B9342500F37A86 /* ListViewController.swift */,
 				48DB9D2D27B84387007D4CB0 /* ExtensionViewController.swift */,
 			);
 			path = controller;
@@ -95,6 +124,7 @@
 		48DB9D1827B7B76C007D4CB0 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				489D055727B913EE00F37A86 /* Data */,
 				48DB9D1C27B7BBD6007D4CB0 /* client */,
 				48DB9D1D27B7BBE1007D4CB0 /* response */,
 				48DB9D1927B7B77D007D4CB0 /* request */,
@@ -124,16 +154,17 @@
 			children = (
 				48DB9D2327B813D9007D4CB0 /* ErrorResponse.swift */,
 				48DB9D2827B81C89007D4CB0 /* LoginResponse.swift */,
+				489D055327B90BAE00F37A86 /* StudentLocation.swift */,
 			);
 			path = response;
 			sourceTree = "<group>";
 		};
-		48DB9D2027B811BB007D4CB0 /* Utils */ = {
+		48DB9D2027B811BB007D4CB0 /* utils */ = {
 			isa = PBXGroup;
 			children = (
 				48DB9D2127B811DD007D4CB0 /* Utils.swift */,
 			);
-			path = Utils;
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,13 +239,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				48DB9D1F27B805A5007D4CB0 /* UdacityClient.swift in Sources */,
+				489D055427B90BAE00F37A86 /* StudentLocation.swift in Sources */,
 				48DB9D0827B7B731007D4CB0 /* LoginViewController.swift in Sources */,
 				48DB9D0427B7B731007D4CB0 /* AppDelegate.swift in Sources */,
 				48DB9D2C27B82477007D4CB0 /* MethodAPI.swift in Sources */,
+				489D055627B9109F00F37A86 /* MapViewController.swift in Sources */,
+				489D055B27B9342500F37A86 /* ListViewController.swift in Sources */,
 				48DB9D0627B7B731007D4CB0 /* SceneDelegate.swift in Sources */,
 				48DB9D2227B811DD007D4CB0 /* Utils.swift in Sources */,
+				489D055927B9141000F37A86 /* StudentLocationModel.swift in Sources */,
 				48DB9D2E27B84387007D4CB0 /* ExtensionViewController.swift in Sources */,
 				48DB9D2727B81B6C007D4CB0 /* LoginRequest.swift in Sources */,
+				489D055E27B9491400F37A86 /* StudentLocationCell.swift in Sources */,
 				48DB9D2927B81C89007D4CB0 /* LoginResponse.swift in Sources */,
 				48DB9D2427B813D9007D4CB0 /* ErrorResponse.swift in Sources */,
 			);

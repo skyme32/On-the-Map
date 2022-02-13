@@ -10,6 +10,15 @@ import Foundation
 
 class MethodAPI {
     
+    // MARK: Methods
+    
+    enum Methods {
+        static let get = "GET"
+        static let post = "POST"
+        static let put = "PUT"
+        static let delete = "DELETE"
+    }
+    
     // MARK: Request Method GET
     
     public class func taskForGETRequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, completion:
@@ -51,7 +60,7 @@ class MethodAPI {
     public class func taskForPOSTRequest<RequestType: Encodable, ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, body: RequestType, completion:
                                                                                           @escaping (ResponseType?, Error?) -> Void) {
         var request = URLRequest(url: url)
-        request.httpMethod = "POST"
+        request.httpMethod = Methods.post
         request.httpBody = try! JSONEncoder().encode(body)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -95,7 +104,7 @@ class MethodAPI {
     class func taskForDELETERequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, completion:
                                                              @escaping (ResponseType?, Error?) -> Void) {
         var request = URLRequest(url: url)
-        request.httpMethod = "DELETE"
+        request.httpMethod = Methods.delete
         var xsrfCookie: HTTPCookie? = nil
         let sharedCookieStorage = HTTPCookieStorage.shared
         for cookie in sharedCookieStorage.cookies! {
