@@ -13,7 +13,8 @@ class MapViewController: UIViewController {
     
     // MARK: @IBOutlet and constants
     
-    @IBOutlet weak var onStudentsMAp: MKMapView!
+    @IBOutlet weak var onStudentsMap: MKMapView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     let limit: Int = FilterByStudent.MEDIUM
     let order: String = OrderByStudent.updatedAt
@@ -23,7 +24,7 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        onStudentsMAp.delegate = self        
+        onStudentsMap.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,9 +41,11 @@ class MapViewController: UIViewController {
     // MARK: Add Mark annotations
     
     private func getStudentList() {
+        setLoggingIn(true)
         UdacityClient.getStudentLocationList(limit: limit, order: order) { studentLocations, error in
             StudentLocationModel.studentlist = studentLocations
             self.addMarkAnnotations()
+            self.setLoggingIn(false)
         }
     }
     
@@ -67,9 +70,18 @@ class MapViewController: UIViewController {
             annotations.append(annotation)
         }
         
-        self.onStudentsMAp.addAnnotations(annotations)
+        self.onStudentsMap.addAnnotations(annotations)
     }
 
+    // MARK: Loggin Animations
+    
+    func setLoggingIn(_ loggingIn: Bool) {
+        if loggingIn {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+        }
+    }
 }
 
 // MARK: MKMap delegte

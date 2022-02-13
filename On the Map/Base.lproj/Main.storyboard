@@ -322,6 +322,13 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="09T-9x-CyP">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </mapView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="deT-tW-hfh">
+                                <rect key="frame" x="187" y="428" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="GC5-yX-e3r"/>
+                                    <constraint firstAttribute="height" constant="40" id="HA5-0f-7TS"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p5z-qO-wWz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -330,6 +337,8 @@
                             <constraint firstItem="p5z-qO-wWz" firstAttribute="trailing" secondItem="09T-9x-CyP" secondAttribute="trailing" id="HIF-yY-tlT"/>
                             <constraint firstItem="p5z-qO-wWz" firstAttribute="bottom" secondItem="09T-9x-CyP" secondAttribute="bottom" id="HPt-NA-fLU"/>
                             <constraint firstItem="09T-9x-CyP" firstAttribute="top" secondItem="p5z-qO-wWz" secondAttribute="top" id="YqN-a1-o27"/>
+                            <constraint firstItem="deT-tW-hfh" firstAttribute="centerX" secondItem="HeZ-2b-vw4" secondAttribute="centerX" id="blk-3B-p0k"/>
+                            <constraint firstItem="deT-tW-hfh" firstAttribute="centerY" secondItem="HeZ-2b-vw4" secondAttribute="centerY" id="yvP-np-YAv"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map.fill" catalog="system" id="mUh-AF-GCB"/>
@@ -354,7 +363,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="onStudentsMAp" destination="09T-9x-CyP" id="mjx-xe-jIJ"/>
+                        <outlet property="activityIndicator" destination="deT-tW-hfh" id="Igo-tv-AkX"/>
+                        <outlet property="onStudentsMap" destination="09T-9x-CyP" id="4fK-CY-JNu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X1Q-Qm-ZvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
