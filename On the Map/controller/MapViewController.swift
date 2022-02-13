@@ -32,16 +32,10 @@ class MapViewController: UIViewController {
         self.getStudentList()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
-    
     // MARK: Actions on ViewController
     
     @IBAction func refreshStudents(_ sender: Any) {
         self.getStudentList()
-    }
-    
-    @IBAction func newStudent(_ sender: Any) {
     }
     
     // MARK: Add Mark annotations

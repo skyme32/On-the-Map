@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
-        UIApplication.shared.open(UdacityClient.Endpoints.webAuth.url, options: [:], completionHandler: nil)
+        UIApplication.shared.open(UdacityClient.Endpoints.SignUp.url, options: [:], completionHandler: nil)
     }
     
     // MARK: Handles

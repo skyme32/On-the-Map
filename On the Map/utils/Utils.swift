@@ -26,7 +26,7 @@ class Utils {
     class func showLoginFailure(title: String, message: String, view: UIViewController) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        view.show(alertVC, sender: nil)
+        view.present(alertVC, animated: true, completion: nil)
     }
 
 }
