@@ -69,8 +69,13 @@ class MapViewController: UIViewController {
             
             annotations.append(annotation)
         }
-        
+        self.removeAllAnnotationsToMAp()
         self.onStudentsMap.addAnnotations(annotations)
+    }
+    
+    private func removeAllAnnotationsToMAp() {
+        let allAnnotations = self.onStudentsMap.annotations
+        self.onStudentsMap.removeAnnotations(allAnnotations)
     }
 
     // MARK: Loggin Animations

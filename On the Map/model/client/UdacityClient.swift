@@ -72,7 +72,7 @@ class UdacityClient {
     
     class func getStudentLocationList(limit: Int, order: String, completion: @escaping ([StudentLocation], Error?) -> Void) {
         let urlExtension = Endpoints.studentLocations(order, limit).url
-        MethodAPI.taskForGETRequest(url: urlExtension, responseType: StudentResults.self) { response, error in
+        MethodAPI.taskForGETRequest(url: urlExtension, responseType: StudentLocation.self) { response, error in
             if let response = response {
                 completion(response.results, nil)
             } else {

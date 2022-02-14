@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 
 enum OrderByStudent {
@@ -30,6 +31,15 @@ struct StudentResults: Codable {
 }
 
 struct StudentLocation: Codable {
+        
+    //static let shared: StudentLocation = StudentLocation()
+    //lazy var results: [StudentLocation] = []
+    
+    static let shared: StudentLocation = {
+        let instance = StudentLocation()
+        return instance
+    }()
+    
     var uniqueKey: String
     var firstName: String
     var lastName:  String
@@ -37,4 +47,22 @@ struct StudentLocation: Codable {
     var mediaURL:  String
     var latitude:  Double
     var longitude: Double
+    
+    init(uniqueKey: String? = "",
+         firstName: String? = "",
+         lastName: String? = "",
+         mapString: String? = "",
+         mediaURL: String? = "",
+         latitude: Double? = 0.0,
+         longitude: Double? = 0.0
+    ) {
+        self.uniqueKey = uniqueKey!
+        self.firstName = firstName!
+        self.lastName  = lastName!
+        self.mapString = mapString!
+        self.mediaURL = mediaURL!
+        self.latitude = latitude!
+        self.longitude = longitude!
+    }
+    
 }

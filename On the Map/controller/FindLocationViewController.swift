@@ -40,13 +40,11 @@ class FindLocationViewController: UIViewController {
         if segue.identifier == "completeLocation" {
             let detailLocation = segue.destination as! AddLocationViewController
             detailLocation.studentLocation = StudentLocation(
-                                                uniqueKey: "",
-                                                firstName: "",
-                                                lastName: "",
-                                                mapString: stringLocationText.text!,
-                                                mediaURL: urlWebText.text!,
-                                                latitude: coordinate.latitude,
-                                                longitude: coordinate.longitude)
+                mapString: stringLocationText.text!,
+                mediaURL: urlWebText.text!,
+                latitude: coordinate.latitude,
+                longitude: coordinate.longitude
+            )
         }
     }
     
