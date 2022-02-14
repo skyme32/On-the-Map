@@ -9,5 +9,7 @@ import Foundation
 
 
 class StudentLocationModel {
-    static var studentlist = [StudentLocation]()
+    static let shared = StudentLocationModel()
+    private init() {}
+    var studentlist = [StudentLocation]()
 }

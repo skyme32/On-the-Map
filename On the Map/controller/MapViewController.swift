@@ -43,14 +43,14 @@ class MapViewController: UIViewController {
     private func getStudentList() {
         setLoggingIn(true)
         UdacityClient.getStudentLocationList(limit: limit, order: order) { studentLocations, error in
-            StudentLocationModel.studentlist = studentLocations
+            StudentLocationModel.shared.studentlist = studentLocations
             self.addMarkAnnotations()
             self.setLoggingIn(false)
         }
     }
     
     private func addMarkAnnotations() {
-        let locations = StudentLocationModel.studentlist
+        let locations = StudentLocationModel.shared.studentlist
         var annotations = [MKPointAnnotation]()
 
         for dictionary in locations {

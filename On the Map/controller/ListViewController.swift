@@ -37,7 +37,7 @@ class ListViewController: UIViewController {
     
     private func getStudentList() {
         UdacityClient.getStudentLocationList(limit: limit, order: order) { studentLocations, error in
-            StudentLocationModel.studentlist = studentLocations
+            StudentLocationModel.shared.studentlist = studentLocations
             self.tableView.reloadData()
         }
     }
@@ -52,11 +52,11 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return StudentLocationModel.studentlist.count
+        return StudentLocationModel.shared.studentlist.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let student = StudentLocationModel.studentlist[indexPath.row]
+        let student = StudentLocationModel.shared.studentlist[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as! StudentLocationCell
         cell.nameLabel?.text = "\(student.firstName) \(student.lastName)"
@@ -66,7 +66,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let urlExtern = StudentLocationModel.studentlist[indexPath.row].mediaURL
+        let urlExtern = StudentLocationModel.shared.studentlist[indexPath.row].mediaURL
         Utils.openURL(urlString: urlExtern, view: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }

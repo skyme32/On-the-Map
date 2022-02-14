@@ -31,14 +31,6 @@ struct StudentResults: Codable {
 }
 
 struct StudentLocation: Codable {
-        
-    //static let shared: StudentLocation = StudentLocation()
-    //lazy var results: [StudentLocation] = []
-    
-    static let shared: StudentLocation = {
-        let instance = StudentLocation()
-        return instance
-    }()
     
     var uniqueKey: String
     var firstName: String
